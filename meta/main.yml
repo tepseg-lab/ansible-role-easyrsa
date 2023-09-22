@@ -2,8 +2,8 @@
 
 galaxy_info:
   role_name: easyrsa
-  namespace: nkakouros
-  author: Nikolaos Kakouros
+  namespace: tepseg-ab
+  author: sj
   description: Installs easyrsa and generates keys and certificates
 
   license: GPLv3

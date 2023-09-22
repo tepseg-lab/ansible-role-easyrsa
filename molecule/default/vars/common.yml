@@ -4,7 +4,7 @@ easyrsa_pki_dir: /etc/easyrsa/store
 easyrsa_pki_dir_alt: /etc/easyrsa/store2
 
 easyrsa_conf_req_cn: "Molecule CA"
-# easyrsa_repo: https://github.com/nkakouros/easy-rsa
+# easyrsa_repo: https://github.com/tepseg-ab/easy-rsa
 # easyrsa_version: v3.1.0
 
 easyrsa_download_dir: '/tmp/easyrsa-ansible-role'

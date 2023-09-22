@@ -4,7 +4,7 @@
 ---
 easyrsa_enabled: true
 easyrsa_repo: 'https://github.com/OpenVPN/easy-rsa'
-easyrsa_version: master
+easyrsa_version: 'v3.1.6'
 easyrsa_pki_dir: /etc/easyrsa/pki
 easyrsa_replace_pki: false
 easyrsa_conf_temp_dir: '.'

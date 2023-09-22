@@ -17,7 +17,7 @@
   vars:
     easyrsa_enabled: false
   roles:
-    - nkakouros.easyrsa
+    - tepseg-ab.easyrsa
   tasks:
     - name: Check role did not run
       assert:
@@ -29,7 +29,7 @@
   vars_files:
     - vars/common.yml
   roles:
-    - role: nkakouros.easyrsa
+    - role: tepseg-ab.easyrsa
       easyrsa_download_dir: "{{ easyrsa_download_dir_alt }}"
       easyrsa_download: []
       easyrsa_download_pki: false
@@ -39,7 +39,7 @@
   vars_files:
     - vars/common.yml
   roles:
-    - role: nkakouros.easyrsa
+    - role: tepseg-ab.easyrsa
       easyrsa_download_dir: "{{ easyrsa_download_dir_alt2 }}"
       easyrsa_download: []
       easyrsa_download_pki: true
@@ -57,7 +57,7 @@
 
     - name: Run the role
       include_role:
-        name: nkakouros.easyrsa
+        name: tepseg-ab.easyrsa
       vars:
         easyrsa_download_dir: "{{ easyrsa_download_dir_alt3 }}"
         easyrsa_download: "{{ case1.easyrsa_clients }}"
@@ -79,14 +79,14 @@
   tasks:
     - name: Generate certificate to be revoked and revoke it
       include_role:
-        name: nkakouros.easyrsa
+        name: tepseg-ab.easyrsa
         public: true
 
     - meta: flush_handlers  # noqa name[missing]
 
     - name: Try to re-revoke the revoked certificate
       include_role:
-        name: nkakouros.easyrsa
+        name: tepseg-ab.easyrsa
       vars:
         easyrsa_clients: []
         easyrsa_renew: []
@@ -102,12 +102,12 @@
   vars_files:
     - vars/common.yml
   roles:
-    - role: nkakouros.easyrsa
+    - role: tepseg-ab.easyrsa
       easyrsa_pki_dir: "{{ easyrsa_pki_dir_alt }}"
       easyrsa_replace_pki: true
       easyrsa_clients:
         - name: one-client
 
-    - role: nkakouros.easyrsa
+    - role: tepseg-ab.easyrsa
       easyrsa_pki_dir: "{{ easyrsa_pki_dir_alt }}"
       easyrsa_replace_pki: true

@@ -8,7 +8,7 @@
   tasks:
     - name: Run the role
       include_role:
-        name: nkakouros.easyrsa
+        name: tepseg-ab.easyrsa
 
     - name: Register that the converge tasks have finished
       set_fact:

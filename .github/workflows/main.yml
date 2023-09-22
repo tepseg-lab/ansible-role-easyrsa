@@ -20,7 +20,7 @@ jobs:
 
     env:
       driver: docker
-      role_name: nkakouros.easyrsa
+      role_name: tepseg-ab.easyrsa
 
 
     strategy:
@@ -43,7 +43,7 @@ jobs:
       - name: Get linter-config repo
         uses: actions/checkout@v3
         with:
-          repository: nkakouros-original/linter-configs
+          repository: tepseg-ab-original/linter-configs
           path: linter-configs
 
       - name: Copy linter configs in place
