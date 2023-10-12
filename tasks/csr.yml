@@ -17,4 +17,4 @@
   loop: "{{ easyrsa_servers + easyrsa_clients }}"
   loop_control:
     loop_var: _easyrsa__cert
-  no_log: false #"{{ lookup('ansible.builtin.env', 'MOLECULE_FILE') is falsy }}"
+  no_log: "{{ lookup('ansible.builtin.env', 'MOLECULE_FILE') is falsy }}"
